@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Produk / Barang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+        <table border="1" style="width:95%" align="center" cellspacing="0" cellpadding="10">
+            <tr>
+                <th colspan="2">8.2 MASTER PRODUK / BARANG</th>
+            </tr>
+            <tr>
+                <td colspan="2">Lengkapi data berikut. Field bertanda (*) wajib diisi.</td>
+            </tr>
+            <tr>
+                <td>Kode Barang / SKU (*)</td>
+                <td><input type="text" name="kode_barang" value=" " required></td>
+            </tr>
+            <tr>
+                <td>Nama Barang (*)</td>
+                <td><input type="text" name="nama_barang" value=" " required></td>
+            </tr>
+            <tr>
+                <td>Kategori (*)</td>
+                <td>
+                    <select name="kategori" required>
+                        <option>Aksesori Komputer</option>
+                        <option>Lainnya..</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Merek</td>
+                <td><input type="text" name="merek" value=" "></td>
+            </tr>
+            <tr>
+                <td>Harga Jual (*)</td>
+                <td><input type="text" name="harga_jual" value=" " required></td>
+            </tr>
+            <tr>
+                <td>Harga Modal</td>
+                <td><input type="text" name="harga_modal" value=" "></td>
+            </tr>
+            <tr>
+                <td>Stok Awal (*)</td>
+                <td><input type="number" name="stok_awal" value=" " required></td>
+            </tr>
+            <tr>
+                <td>Batas Stok Minimum</td>
+                <td><input type="number" name="batas_stok" value=" "></td>
+            </tr>
+            <tr>
+                <td>Berat (gram)</td>
+                <td><input type="number" name="berat" value=" "></td>
+            </tr>
+            <tr>
+                <td>Foto Barang</td>
+                <td><input type="file" name="foto_barang"></td>
+            </tr>
+            <tr>
+                <td>Deskripsi</td>
+                <td><textarea name="deskripsi" rows="2"> </textarea></td>
+            </tr>
+            <tr>
+                <td>Status (*)</td>
+                <td>
+                    <select name="status">
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="#05e2ff">
+                    <button type="button" onclick="simpan()">[ SIMPAN ]</button>
+                    <button type="reset">[ RESET ]</button>
+                    <button type="button" onclick="kembali()">[ KEMBALI ]</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="fnc.js"></script>
+</body>
+</html>

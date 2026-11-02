@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Pelanggan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+        <table border="1" style="width:95%" align="center" cellspacing="0" cellpadding="10">
+            <tr>
+                <th colspan="2">8.5 MASTER PELANGGAN</th>
+            </tr>
+            <tr>
+                <td colspan="2">Lengkapi data berikut. Field bertanda (*) wajib diisi.</td>
+            </tr>
+            <tr>
+                <td>Kode Pelanggan (*)</td>
+                <td><input type="text" name="kode_pelanggan" value="" required></td>
+            </tr>
+            <tr>
+                <td>Nama Lengkap (*)</td>
+                <td><input type="text" name="nama_lengkap" value="" required></td>
+            </tr>
+            <tr>
+                <td>Email (*)</td>
+                <td><input type="email" name="email" value="" required></td>
+            </tr>
+            <tr>
+                <td>Nomor Telepon (*)</td>
+                <td><input type="text" name="no_telepon" value="" required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" name="password" value=""></td>
+            </tr>
+            <tr>
+                <td>Alamat Utama</td>
+                <td><textarea name="alamat_utama" rows="2"></textarea></td>
+            </tr>
+            <tr>
+                <td>Status (*)</td>
+                <td>
+                    <select name="status">
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="#05e2ff">
+                    <button type="button" onclick="simpan()">[ SIMPAN ]</button>
+                    <button type="reset">[ RESET ]</button>
+                    <button type="button" onclick="kembali()">[ KEMBALI ]</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="fnc.js"></script>
+</body>
+</html>

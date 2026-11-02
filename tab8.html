@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Metode Pembayaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+        <table border="1" style="width:95%" align="center" cellspacing="0" cellpadding="10">
+            <tr>
+                <th colspan="2">8.7 MASTER METODE PEMBAYARAN</th>
+            </tr>
+            <tr>
+                <td colspan="2">Lengkapi data berikut. Field bertanda (*) wajib diisi.</td>
+            </tr>
+            <tr>
+                <td>Kode Metode (*)</td>
+                <td><input type="text" name="kode_metode" value="" required></td>
+            </tr>
+            <tr>
+                <td>Nama Metode (*)</td>
+                <td><input type="text" name="nama_metode" value="" required></td>
+            </tr>
+            <tr>
+                <td>Jenis (*)</td>
+                <td>
+                    <select name="jenis">
+                        <option>Transfer / VA / E-Wallet</option>
+                        <option>DANA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Instruksi Pembayaran</td>
+                <td><textarea name="instruksi_pembayaran" rows="2"></textarea></td>
+            </tr>
+            <tr>
+                <td>Biaya Layanan</td>
+                <td><input type="text" name="biaya_layanan" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+            </tr>
+            <tr>
+                <td>Status (*)</td>
+                <td>
+                    <select name="status">
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="#05e2ff">
+                    <button type="button" onclick="simpan()">[ SIMPAN ]</button>
+                    <button type="reset">[ RESET ]</button>
+                    <button type="button" onclick="kembali()">[ KEMBALI ]</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="fnc.js"></script>
+</body>
+</html>

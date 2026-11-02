@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Voucher / Promo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+        <table border="1" style="width:95%" align="center" cellspacing="0" cellpadding="10">
+            <tr>
+                <th colspan="2">8.9 MASTER VOUCHER / PROMO</th>
+            </tr>
+            <tr>
+                <td colspan="2">Lengkapi data berikut. Field bertanda (*) wajib diisi.</td>
+            </tr>
+            <tr>
+                <td>Kode Promo (*)</td>
+                <td><input type="text" name="kode_promo" value="" required></td>
+            </tr>
+            <tr>
+                <td>Nama Promo (*)</td>
+                <td><input type="text" name="nama_promo" value="" required></td>
+            </tr>
+            <tr>
+                <td>Jenis Diskon (*)</td>
+                <td>
+                    <select name="jenis_diskon" required>
+                        <option>Persentase / Nominal</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Nilai Diskon (*)</td>
+                <td><input type="number" name="nilai_diskon" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required></td>
+            </tr>
+            <tr>
+                <td>Minimum Belanja</td>
+                <td><input type="text" name="minimum_belanja" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+            </tr>
+            <tr>
+                <td>Maksimum Diskon</td>
+                <td><input type="text" name="maksimum_diskon" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+            </tr>
+            <tr>
+                <td>Tanggal Mulai (*)</td>
+                <td><input type="date" name="tanggal_mulai" value="" required></td>
+            </tr>
+            <tr>
+                <td>Tanggal Berakhir (*)</td>
+                <td><input type="date" name="tanggal_berakhir" value="" required></td>
+            </tr>
+            <tr>
+                <td>Kuota Penggunaan</td>
+                <td><input type="number" name="kuota_penggunaan" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+            </tr>
+            <tr>
+                <td>Status (*)</td>
+                <td>
+                    <select name="status" required>
+                        <option>Aktif</option>
+                        <option>Tidak Aktif</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="#05e2ff">
+                    <button type="button" onclick="simpan()">[ SIMPAN ]</button>
+                    <button type="reset">[ RESET ]</button>
+                    <button type="button" onclick="kembali()">[ KEMBALI ]</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="fnc.js"></script>
+</body>
+</html>

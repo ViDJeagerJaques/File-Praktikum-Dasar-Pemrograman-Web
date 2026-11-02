@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Alamat Pengiriman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form>
+        <table border="1" style="width:95%" align="center" cellspacing="0" cellpadding="10">
+            <tr>
+                <th colspan="2">8.6 MASTER ALAMAT PENGIRIMAN</th>
+            </tr>
+            <tr>
+                <td colspan="2">Lengkapi data berikut. Field bertanda (*) wajib diisi.</td>
+            </tr>
+            <tr>
+                <td>Pelanggan (*)</td>
+                <td>
+                    <select name="pelanggan">
+                        <option>Andi Saputra</option>
+                        <option>Syafroni</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Label Alamat (*)</td>
+                <td><input type="text" name="label_alamat" value="" required></td>
+            </tr>
+            <tr>
+                <td>Nama Penerima (*)</td>
+                <td><input type="text" name="nama_penerima" value="" required></td>
+            </tr>
+            <tr>
+                <td>Nomor Telepon (*)</td>
+                <td><input type="text" name="no_telepon" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required></td>
+            </tr>
+            <tr>
+                <td>Provinsi (*)</td>
+                <td>
+                    <select name="provinsi">
+                        <option>Riau</option>
+                        <option>Maluku</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Kota/Kabupaten (*)</td>
+                <td>
+                    <select name="kota">
+                        <option>Pekanbaru</option>
+                        <option>Padang</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Kecamatan</td>
+                <td>
+                    <select name="kecamatan">
+                        <option>Marpoyan Damai</option>
+                        <option>Tangerang Barat</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat Lengkap (*)</td>
+                <td><textarea name="alamat_lengkap" rows="2" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Kode Pos</td>
+                <td><input type="text" name="kode_pos" value="" oninput="this.value = this.value.replace(/[^0-9]/g, '')"></td>
+            </tr>
+            <tr>
+                <td>Alamat Utama</td>
+                <td><input type="checkbox" name="alamat_utama"> Ya</td>
+            </tr>
+            <tr>
+                <td colspan="2" bgcolor="#05e2ff">
+                    <button type="button" onclick="simpan()">[ SIMPAN ]</button>
+                    <button type="reset">[ RESET ]</button>
+                    <button type="button" onclick="kembali()">[ KEMBALI ]</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script src="fnc.js"></script>
+</body>
+</html>
