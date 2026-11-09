@@ -23,22 +23,22 @@ function tampilJumlah($jumlah)
     return $jumlah === null ? "–" : $jumlah;
 }
 
-$jumlahKategori = hitungData($koneksi, "categories");
-$jumlahProduk = hitungData($koneksi, "products");
-$jumlahPelanggan = hitungData($koneksi, "customers");
-$jumlahMerek = hitungData($koneksi, "brands");
-$jumlahSatuan = hitungData($koneksi, "units");
-$jumlahKurir = hitungData($koneksi, "couriers");
-$jumlahPembayaran = hitungData($koneksi, "payment_methods");
-$jumlahVoucher = hitungData($koneksi, "vouchers");
-$jumlahPajak = hitungData($koneksi, "taxes");
+$jumlahKategori = hitungData($koneksi, "`1categories`");
+$jumlahProduk = hitungData($koneksi, "`2products`");
+$jumlahPelanggan = hitungData($koneksi, "`5customers`");
+$jumlahMerek = hitungData($koneksi, "`3brands`");
+$jumlahSatuan = hitungData($koneksi, "`4units`");
+$jumlahKurir = hitungData($koneksi, "`8couriers`");
+$jumlahPembayaran = hitungData($koneksi, "`7payment_methods`");
+$jumlahVoucher = hitungData($koneksi, "`9vouchers`");
+$jumlahPajak = hitungData($koneksi, "`10taxes`");
 
 $jumlahStokRendah = null;
 $produkStokRendah = [];
 
 try {
     $sql = "SELECT nama_barang, stok_awal, batas_stok
-            FROM products
+            FROM `2products`
             WHERE stok_awal < batas_stok
             ORDER BY stok_awal ASC";
 

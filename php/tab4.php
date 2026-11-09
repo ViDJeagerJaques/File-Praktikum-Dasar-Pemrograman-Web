@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (!in_array($status, ["Aktif", "Tidak Aktif"])) {
         $pesan = "Status tidak valid.";
     } else {
-        $sql = "INSERT INTO brands
+        $sql = "INSERT INTO `3brands`
                 (kode_merek, nama_merek, keterangan, status)
                 VALUES (?, ?, ?, ?)";
 

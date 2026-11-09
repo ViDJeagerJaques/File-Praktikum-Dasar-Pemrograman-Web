@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($kode_kategori == "" || $nama_kategori == "") {
         $pesan = "Kode kategori dan nama kategori wajib diisi.";
     } else {
-        $sql = "INSERT INTO categories
+        $sql = "INSERT INTO `1categories`
                 (kode_kategori, nama_kategori, kategori_induk, deskripsi, status)
                 VALUES (?, ?, ?, ?, ?)";
 

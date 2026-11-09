@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         $daftarKolom = implode(", ", $kolom);
         $tanda = implode(", ", array_fill(0, count($kolom), "?"));
-        $sql = "INSERT INTO shipping_addresses ($daftarKolom) VALUES ($tanda)";
+        $sql = "INSERT INTO `6shipping_addresses` ($daftarKolom) VALUES ($tanda)";
         try {
             $stmt = $koneksi->prepare($sql);
             $nilai = array_values($data);

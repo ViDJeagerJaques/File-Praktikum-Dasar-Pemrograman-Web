@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         $daftarKolom = implode(", ", $kolom);
         $tanda = implode(", ", array_fill(0, count($kolom), "?"));
-        $sql = "INSERT INTO payment_methods ($daftarKolom) VALUES ($tanda)";
+        $sql = "INSERT INTO `7payment_methods` ($daftarKolom) VALUES ($tanda)";
         try {
             $stmt = $koneksi->prepare($sql);
             $nilai = array_values($data);

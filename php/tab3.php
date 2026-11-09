@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if ($pesan == "") {
-            $sql = "INSERT INTO products
+            $sql = "INSERT INTO `2products`
                     (kode_barang, nama_barang, kategori, merek,
                      harga_jual, harga_modal, stok_awal, batas_stok,
                      berat, foto_barang, deskripsi, status)
