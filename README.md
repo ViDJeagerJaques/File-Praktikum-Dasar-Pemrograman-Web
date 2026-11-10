@@ -5,4 +5,4 @@
 
 **Semoga tugas ini diterima** 
 
-/cara buka php di pc labor : "http://localhost:8080/phpmyadmin/" / 
+*cara buka php di pc labor : "http://localhost:8080/phpmyadmin/"*
