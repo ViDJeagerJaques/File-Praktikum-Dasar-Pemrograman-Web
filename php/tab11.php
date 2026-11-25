@@ -1,4 +1,5 @@
 <?php
+require "auth.php";
 require "koneksi.php";
 $pesan = "";
 $kolom = array("kode_pajak", "nama_pajak", "persentase", "berlaku_mulai", "status");
@@ -45,22 +46,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
+
 ?>
 <!DOCTYPE html>
-
 <html lang="id">
-
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Pajak</title>
-    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-    <form action="tab11.php" method="POST">
-        <table align="center" border="1" cellpadding="10" cellspacing="0" style="width:95%">
-            <tr>
+<body class="dashboard">
+    <aside class="sidebar">
+        <h2>Admin E-Commerce</h2>
+        <nav>
+            <a href="index.php">Dashboard</a>
+            <a href="tab2.php">Kategori Produk</a>
+            <a href="tab3.php">Produk / Barang</a>
+            <a href="tab4.php">Merek</a>
+            <a href="tab5.php">Satuan</a>
+            <a href="tab6.php">Pelanggan</a>
+            <a href="tab7.php">Alamat Pengiriman</a>
+            <a href="tab8.php">Metode Pembayaran</a>
+            <a href="tab9.php">Kurir / Pengiriman</a>
+            <a href="tab10.php">Voucher / Promo</a>
+            <a class="active" href="tab11.php">Pajak</a>
+            <a href="tab12.php">Laporan Order</a>
+            <a href="logout.php">Logout</a>
+        </nav>
+    </aside>
+    <div class="dashboard-wrapper">
+        <header class="dashboard-header">
+            <h1>8.10 MASTER PAJAK</h1>
+            <p>Sistem Administrasi E-Commerce</p>
+            <p class="student-info">
+                Nama: David Atha R |
+                NIM: 250402049 |
+                Kelas: 3A2
+            </p>
+        </header>
+        <main class="dashboard-content">
+            <section class="dashboard-panel">
+    <form method="POST" action="tab11.php">
+        <div class="table-container">
+        <table class="stock-table">
+<tr>
                 <th colspan="2">8.10 MASTER PAJAK</th>
             </tr>
             <tr>
@@ -94,15 +124,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </td>
             </tr>
             <tr>
-                <td bgcolor="#05e2ff" colspan="2">
+                <td  colspan="2" style="text-align:center;">
                     <button type="submit">[ SIMPAN ]</button>
                     <button type="reset">[ RESET ]</button>
                     <button onclick="window.location.href='index.php'" type="button">[ KEMBALI ]</button>
                 </td>
             </tr>
         </table>
+        </div>
     </form>
-
+    <p style="text-align:center;"><a href="tab12.php">Lihat Laporan Order</a> | <a href="index.php">Kembali ke Dashboard</a></p>
+            </section>
+            
+        </main>
+    </div>
 </body>
-
 </html>

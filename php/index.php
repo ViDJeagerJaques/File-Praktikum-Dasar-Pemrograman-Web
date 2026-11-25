@@ -1,4 +1,5 @@
 <?php
+require "auth.php";
 $judul = "Dashboard E-Commerce";
 $namaWebsite = "Sistem Administrasi E-Commerce";
 $nama = "David Atha R";
@@ -32,6 +33,7 @@ $jumlahKurir = hitungData($koneksi, "`8couriers`");
 $jumlahPembayaran = hitungData($koneksi, "`7payment_methods`");
 $jumlahVoucher = hitungData($koneksi, "`9vouchers`");
 $jumlahPajak = hitungData($koneksi, "`10taxes`");
+$jumlahOrder = hitungData($koneksi, "`11orders`");
 
 $jumlahStokRendah = null;
 $produkStokRendah = [];
@@ -82,6 +84,8 @@ $koneksi->close();
             <a href="tab9.php">Kurir / Pengiriman</a>
             <a href="tab10.php">Voucher / Promo</a>
             <a href="tab11.php">Pajak</a>
+            <a href="tab12.php">Laporan Order</a>
+            <a href="logout.php">Logout</a>
         </nav>
     </aside>
 
@@ -94,7 +98,9 @@ $koneksi->close();
             <p class="student-info">
                 Nama: <?php echo htmlspecialchars($nama); ?> |
                 NIM: <?php echo htmlspecialchars($nim); ?> |
-                Kelas: <?php echo htmlspecialchars($kelas); ?>
+                Kelas: <?php echo htmlspecialchars($kelas); ?> |
+                Login sebagai: <?php echo htmlspecialchars($_SESSION["admin"]); ?> |
+                <a href="logout.php">Logout</a>
             </p>
         </header>
 
@@ -139,6 +145,19 @@ $koneksi->close();
                     </div>
 
                     <a href="tab6.php">Kelola Pelanggan</a>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-heading">
+                        <h3>Order</h3>
+                        <span></span>
+                    </div>
+
+                    <div class="card-number">
+                        <?php echo tampilJumlah($jumlahOrder); ?>
+                    </div>
+
+                    <a href="tab12.php">Lihat Laporan Order</a>
                 </div>
 
                 <div class="dashboard-card">
@@ -254,11 +273,7 @@ $koneksi->close();
                 </div>
             </section>
 
-            <footer class="dashboard-footer">
-                Sistem Administrasi E-Commerce |
-                <?php echo htmlspecialchars($nama); ?> |
-                <?php echo htmlspecialchars($nim); ?>
-            </footer>
+            
 
         </main>
     </div>
@@ -266,3 +281,4 @@ $koneksi->close();
 </body>
 
 </html>
+    
